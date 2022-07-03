@@ -1,0 +1,62 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+  <!-- <link rel="stylesheet" href="static/register.css"> -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="{% static 'my_login.css' %}">
+
+  <link href='https://fonts.googleapis.com/css?family=Ubuntu:500' rel='stylesheet' type='text/css'>
+  <style>
+    input[type=submit]{
+        background: #0066A2;
+        color: white;
+        border-style: outset;
+        border-color: #0066A2;
+        height: 50px;
+        width: 100px;
+        font: bold15px arial,sans-serif;
+        text-shadow: none;
+        border-radius: 20px;
+        }
+  </style>
+</head>
+<body style="background-image: url('/static/for.jpg');">
+  <br><br><br><br><br>
+  <h1 style="color:white; text-align: center;"><u>Evidence Collection</u></h1><br><br>
+  <div class="login">
+    <div class="login-header">
+      <h2>Login</h2>
+    </div>
+        <div class="login-form">
+            <form action="{% url 'login' %}" method="post">
+                {% csrf_token %}
+                <div class="">
+                    <p style="color:white">User Name </p>
+                    <input type="text" class="name" name="username" required="" />
+                </div>
+                <div class="">
+                    <p style="color:white">Password</p>
+                    <input type="password" class="password" name="password" required="" />
+                </div>
+                
+                <div class="login-agileits-bottom wthree">
+                    <h6>
+                        <!-- <a href="#">Forgot password?</a> -->
+                    </h6>
+                </div><br>
+                <input type="submit" value="Login">
+                <br><br>
+                
+        
+            </form>
+        </div>
+  </div>
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,130 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="zxx">
+
+<head>
+	<title>Sign in</title>
+	<!-- meta-tags -->
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="keywords" content="Soft Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, 
+Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
+	<script>
+		addEventListener("load", function () {
+			setTimeout(hideURLbar, 0);
+		}, false);
+
+		function hideURLbar() {
+			window.scrollTo(0, 1);
+		}
+	</script>
+	<script type = "text/javascript" >
+		function preventBack(){window.history.forward();}
+		 setTimeout("preventBack()", 0);
+		 window.onunload=function(){null};
+	 </script>
+	<!-- //meta-tags -->
+	<link href="{% static 'css/bootstrap.css' %}" rel="stylesheet" type="text/css" media="all" />
+	<link href="{% static 'css/style.css' %}" rel="stylesheet" type="text/css" media="all" />
+	<!-- font-awesome -->
+	<link href="{% static 'css/font-awesome.css' %}" rel="stylesheet">
+	<!-- fonts -->
+	
+</head>
+
+<body>
+	<!-- header -->
+	<div class="header-top">
+		{%  include 'header.html' %}
+		
+	</div>
+
+
+	<div class="services-breadcrumb">
+		<div class="inner_breadcrumb">
+			<ul class="short_ls">
+				<li>
+					<a href="index.html">Home</a>
+					<span>| |</span>
+				</li>
+				<li>Sign In</li>
+			</ul>
+		</div>
+	</div>
+	<!-- //short-->
+	<div class="register-form-main">
+		<div class="container">
+			<div class="title-div">
+				<h3 class="tittle">
+					<span>S</span>ign
+					<span>I</span>n
+				</h3>
+				<div class="tittle-style">
+
+				</div>
+			</div>
+			<div class="login-form">
+				<form action="{% url 'login' %}" method="post">
+                    {% csrf_token %}
+					<div class="">
+						<p>User Name </p>
+						<input type="text" class="name" name="username" required="" />
+					</div>
+					<div class="">
+						<p>Password</p>
+						<input type="password" class="password" name="password" required="" />
+					</div>
+					
+					<div class="login-agileits-bottom wthree">
+						<h6>
+							<!-- <a href="#">Forgot password?</a> -->
+						</h6>
+					</div>
+					<input type="submit" value="Login">
+					<br><br>
+					
+			
+				</form>
+			</div>
+
+		</div>
+	</div>
+
+	<!-- footer -->
+	
+	<!--/footer -->
+
+	<!-- js files -->
+	<!-- js -->
+	<script src="js/jquery-2.1.4.min.js"></script>
+	<!-- bootstrap -->
+	<script src="js/bootstrap.js"></script>
+	<!-- smooth scrolling -->
+	<script src="js/SmoothScroll.min.js"></script>
+	<script src="js/move-top.js"></script>
+	<script src="js/easing.js"></script>
+	<!-- here stars scrolling icon -->
+	<script>
+		$(document).ready(function () {
+			/*
+				var defaults = {
+				containerID: 'toTop', // fading element id
+				containerHoverID: 'toTopHover', // fading element hover id
+				scrollSpeed: 1200,
+				easingType: 'linear' 
+				};
+			*/
+
+			$().UItoTop({
+				easingType: 'easeOutQuart'
+			});
+
+		});
+	</script>
+	<!-- //here ends scrolling icon -->
+	<!-- smooth scrolling -->
+	<!-- //js-files -->
+
+</body>
+
+</html>
